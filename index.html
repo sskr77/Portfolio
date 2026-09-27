@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rayen — Video Editor</title>
+  <meta name="description" content="Rayen Ghribi — Tunisian video editor portfolio." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="cursor-dot"></div>
+
+  <header class="nav">
+    <a class="logo" href="#top">SKR7<span>®</span></a>
+    <nav>
+      <a href="#work">WORK</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+    <a class="nav-cta" href="#contact">LET'S TALK <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="pulse"></span> VIDEO EDITOR · TUNISIA 🇹🇳</p>
+        <h1>I MAKE<br><em>FOOTAGE</em><br>FEEL ALIVE.</h1>
+        <p class="intro">
+          I'm Rayen, a 20-year-old Tunisian video editor. I'm not a full-time editor yet,
+          but I've been growing my skills project by project. Still learning, still experimenting,
+          and improving my craft with every edit.
+        </p>
+        <a class="big-link" href="#work">EXPLORE MY WORK <span>↓</span></a>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="photo-frame">
+          <img src="assets/profile.jpg" alt="Rayen — profile photo"
+               onerror="this.style.display='none'; this.parentElement.classList.add('photo-placeholder')">
+          <div class="placeholder-content">
+            <span>YOUR PHOTO</span>
+            <small>assets/profile.jpg</small>
+          </div>
+          <div class="frame-label">RAYEN / 01</div>
+        </div>
+        <div class="floating-tag tag-one">CUT →</div>
+        <div class="floating-tag tag-two">TUNIS, TN</div>
+        <div class="scribble">STILL<br>LEARNING.</div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Skills">
+      <div class="ticker-track">
+        <span>EDITING</span><b>✦</b><span>STORYTELLING</span><b>✦</b>
+        <span>PACING</span><b>✦</b><span>VISUALS</span><b>✦</b>
+        <span>EDITING</span><b>✦</b><span>STORYTELLING</span><b>✦</b>
+        <span>PACING</span><b>✦</b><span>VISUALS</span><b>✦</b>
+      </div>
+    </section>
+
+    <section class="featured section" id="work">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">01 — SELECTED WORK</p>
+          <h2>A FEW THINGS<br>I'VE <em>MADE.</em></h2>
+        </div>
+        <p class="section-note">A selection of edits. More coming soon.</p>
+      </div>
+      <div class="featured-grid" id="featured-grid"></div>
+    </section>
+
+    <section class="categories section">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">02 — CATEGORIES</p>
+          <h2>WHAT I<br><em>EDIT.</em></h2>
+        </div>
+      </div>
+      <div class="category-list" id="category-list"></div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="about-mark reveal">02<br><span>—</span><br>ME</div>
+      <div class="about-copy reveal">
+        <p class="eyebrow">03 — A LITTLE ABOUT ME</p>
+        <h2>PROJECT BY<br><em>PROJECT.</em></h2>
+        <p>
+          I enjoy turning raw footage into something that feels alive — whether it's a vlog,
+          a gaming video, a reel, or something more cinematic.
+        </p>
+        <p>
+          I'm still learning, experimenting, and finding my own style with every project.
+          For me, every timeline is another chance to get better.
+        </p>
+        <div class="stats">
+          <div><strong>20</strong><span>YEARS OLD</span></div>
+          <div><strong>🇹🇳</strong><span>TUNISIA</span></div>
+          <div><strong>∞</strong><span>IDEAS</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <p class="eyebrow reveal">04 — HAVE A PROJECT?</p>
+      <h2 class="reveal">LET'S MAKE<br><em>SOMETHING.</em></h2>
+      <p class="contact-copy reveal">
+        Got footage sitting on a hard drive waiting to become something?
+        Send me a message and let's talk.
+      </p>
+      <a class="contact-button reveal" href="https://instagram.com/skr7.exe">
+        GET IN TOUCH <span>↗</span>
+      </a>
+      <div class="contact-links reveal">
+        <a href="https://instagram.com/skr7.exe" target="_blank" rel="noopener">INSTAGRAM ↗</a>
+        <a href="mailto:rayounoghribi@gmail.com">EMAIL ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 RAYEN GHRIBI</span>
+    <span>EDITED WITH TOO MUCH COFFEE ☕</span>
+    <span>SKR7®</span>
+  </footer>
+
+  <div class="video-modal" id="video-modal" aria-hidden="true">
+    <button class="modal-close" aria-label="Close">×</button>
+    <div class="modal-inner">
+      <div id="modal-player" class="modal-player"></div>
+      <div class="modal-info">
+        <p class="eyebrow" id="modal-category"></p>
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
